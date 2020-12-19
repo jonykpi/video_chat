@@ -36,8 +36,7 @@ export default {
                 let peer = await new Peer({
                     initiator,
                     stream: this.stream,
-                    trickle: false,
-                    config: { iceServers: [{ urls: 'stun:stun.l.google.com:19302' }] }
+                    trickle: false
                 });
                 console.log(peer,"peerpeerpeer")
                 peer.on('signal', (data) => {
