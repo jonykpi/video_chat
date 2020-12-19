@@ -2000,7 +2000,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
       if (this.peers[userId] === undefined) {
         var peer = new simple_peer__WEBPACK_IMPORTED_MODULE_2___default.a({
-          initiator: initiator,
+          initiator: false,
           stream: this.stream,
           trickle: false,
           config: {

@@ -34,7 +34,7 @@ export default {
         getPeer(userId, initiator) {
             if(this.peers[userId] === undefined) {
                 let peer =  new Peer({
-                    initiator,
+                    initiator: false,
                     stream: this.stream,
                     trickle: false,
                     config: {
