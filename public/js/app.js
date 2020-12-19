@@ -2002,7 +2002,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         var peer = new simple_peer__WEBPACK_IMPORTED_MODULE_2___default.a({
           initiator: initiator,
           stream: this.stream,
-          trickle: false
+          trickle: false,
+          config: {
+            iceServers: [{
+              urls: 'stun:stun.a-mm.tv:3478'
+            }]
+          }
         });
         console.log(peer, "peerpeerpeer");
         peer.on('signal', function (data) {
