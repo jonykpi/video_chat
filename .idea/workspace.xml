@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f703ddbe-4928-4f78-a72e-d689848e1212" name="Default Changelist" comment="vgh">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/VideoChat.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/VideoChat.vue" afterDir="false" />
     </list>
@@ -164,7 +163,7 @@
       <workItem from="1607941638751" duration="1535000" />
       <workItem from="1608283437380" duration="8225000" />
       <workItem from="1608309061513" duration="78000" />
-      <workItem from="1608403207141" duration="8113000" />
+      <workItem from="1608403207141" duration="8665000" />
     </task>
     <task id="LOCAL-00001" summary="vgh">
       <created>1608412284691</created>
@@ -173,7 +172,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608412284691</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="vgh">
+      <created>1608412332215</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608412332216</updated>
+    </task>
+    <task id="LOCAL-00003" summary="vgh">
+      <created>1608412881025</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608412881025</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
