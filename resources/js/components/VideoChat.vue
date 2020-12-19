@@ -35,6 +35,8 @@ export default {
             if(this.peers[userId] === undefined) {
                 let peer = await new Peer({
                     initiator: false,
+                    stream: this.stream,
+                    trickle: false,
                     config: { iceServers: [{ urls: 'stun:stun.l.google.com:19302' }] }
                 });
                 console.log(peer,"peerpeerpeer")

@@ -2012,6 +2012,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _context.next = 3;
                 return new simple_peer__WEBPACK_IMPORTED_MODULE_2___default.a({
                   initiator: false,
+                  stream: _this.stream,
+                  trickle: false,
                   config: {
                     iceServers: [{
                       urls: 'stun:stun.l.google.com:19302'
