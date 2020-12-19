@@ -31,6 +31,7 @@ export default {
         startVideoChat(userId) {
             this.getPeer(userId, true);
         },
+
         getPeer(userId, initiator) {
             if(this.peers[userId] === undefined) {
                 let peer =  new Peer({
