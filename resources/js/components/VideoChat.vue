@@ -40,8 +40,8 @@ export default {
                     config: {
                         iceServers: [
                             { urls: "turn:numb.viagenie.ca",
-                                username: "pasaseh@ether123.net",
-                                credential: "12345678"}
+                                username: "djony620+1@gmail.com",
+                                credential: "djony620+1@gmail.com"}
                         ]
                     }
                 });

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f703ddbe-4928-4f78-a72e-d689848e1212" name="Default Changelist" comment="vgh">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f703ddbe-4928-4f78-a72e-d689848e1212" name="Default Changelist" comment="vgh" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -162,7 +160,7 @@
       <workItem from="1607941638751" duration="1535000" />
       <workItem from="1608283437380" duration="8225000" />
       <workItem from="1608309061513" duration="78000" />
-      <workItem from="1608403207141" duration="9752000" />
+      <workItem from="1608403207141" duration="10313000" />
     </task>
     <task id="LOCAL-00001" summary="vgh">
       <created>1608412284691</created>
@@ -206,7 +204,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608413676961</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="vgh">
+      <created>1608414046666</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608414046666</updated>
+    </task>
+    <task id="LOCAL-00008" summary="vgh">
+      <created>1608414250271</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1608414250271</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
