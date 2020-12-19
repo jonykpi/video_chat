@@ -39,7 +39,9 @@ export default {
                     trickle: false,
                     config: {
                         iceServers: [
-                            {urls: 'stun:stun.a-mm.tv:3478'}
+                            { urls: "turn:numb.viagenie.ca",
+                                username: "pasaseh@ether123.net",
+                                credential: "12345678"}
                         ]
                     }
                 });
