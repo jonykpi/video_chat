@@ -13,25 +13,7 @@
 <script>
 import Pusher from 'pusher-js';
  import Peer from 'simple-peer';
-const iceConfiguration = {
-    iceServers: [
-        {
-            urls: "turn:turnserver.example.org",
-            username: "webrtc",
-            credential: "turnpassword"
-        }
-    ]
-}
 
-//const peerConnection = new RTCPeerConnection(iceConfiguration);
-// var PeerConnection = require('rtcpeerconnection');
-
-
-// init it like a normal peer connection object
-// passing in ice servers/constraints the initial server config
-// also takes a couple other options:
-// debug: true (to log out all emitted events)
-//var peer = new PeerConnection(iceConfiguration);
 export default {
 
     props: ['user', 'others', 'pusherKey', 'pusherCluster'],
