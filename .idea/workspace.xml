@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f703ddbe-4928-4f78-a72e-d689848e1212" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/VideoChat.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/VideoChat.vue" afterDir="false" />
-    </list>
+    <list default="true" id="f703ddbe-4928-4f78-a72e-d689848e1212" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,7 +160,7 @@
       <workItem from="1607941638751" duration="1535000" />
       <workItem from="1608283437380" duration="8225000" />
       <workItem from="1608309061513" duration="78000" />
-      <workItem from="1608403207141" duration="5705000" />
+      <workItem from="1608403207141" duration="6187000" />
     </task>
     <servers />
   </component>

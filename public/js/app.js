@@ -2018,41 +2018,49 @@ var iceConfiguration = {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                if (_this.peers[userId] === undefined) {
-                  peer = new simple_peer__WEBPACK_IMPORTED_MODULE_2___default.a({
-                    trickle: false,
-                    config: {
-                      iceServers: [{
-                        urls: 'stun:stun.l.google.com:19302'
-                      }, {
-                        urls: 'stun:global.stun.twilio.com:3478?transport=udp'
-                      }]
-                    }
-                  });
-                  console.log(peer, "peerpeerpeer");
-                  peer.on('signal', function (data) {
-                    _this.channel.trigger("client-signal-".concat(userId), {
-                      userId: _this.user.id,
-                      data: data
-                    });
-                  }).on('stream', function (stream) {
-                    var videoThere = _this.$refs['video-there'];
-                    videoThere.srcObject = stream;
-                  }).on('close', function () {
-                    var peer = _this.peers[userId];
-
-                    if (peer !== undefined) {
-                      peer.destroy();
-                    }
-
-                    delete _this.peers[userId];
-                  });
-                  _this.peers[userId] = peer;
+                if (!(_this.peers[userId] === undefined)) {
+                  _context.next = 7;
+                  break;
                 }
 
+                _context.next = 3;
+                return new simple_peer__WEBPACK_IMPORTED_MODULE_2___default.a({
+                  trickle: false,
+                  config: {
+                    iceServers: [{
+                      urls: 'stun:stun.l.google.com:19302'
+                    }, {
+                      urls: 'stun:global.stun.twilio.com:3478?transport=udp'
+                    }]
+                  }
+                });
+
+              case 3:
+                peer = _context.sent;
+                console.log(peer, "peerpeerpeer");
+                peer.on('signal', function (data) {
+                  _this.channel.trigger("client-signal-".concat(userId), {
+                    userId: _this.user.id,
+                    data: data
+                  });
+                }).on('stream', function (stream) {
+                  var videoThere = _this.$refs['video-there'];
+                  videoThere.srcObject = stream;
+                }).on('close', function () {
+                  var peer = _this.peers[userId];
+
+                  if (peer !== undefined) {
+                    peer.destroy();
+                  }
+
+                  delete _this.peers[userId];
+                });
+                _this.peers[userId] = peer;
+
+              case 7:
                 return _context.abrupt("return", _this.peers[userId]);
 
-              case 2:
+              case 8:
               case "end":
                 return _context.stop();
             }
