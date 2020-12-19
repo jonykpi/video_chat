@@ -39,9 +39,11 @@ export default {
                     trickle: false,
                     config: {
                         iceServers: [
-                            { urls: "turn:numb.viagenie.ca",
-                                username: "djony620+1@gmail.com",
-                                credential: "djony620+1@gmail.com"}
+                            {
+                                urls: "turns:numb.viagenie.ca",
+                                username: "djony620+2@gmail.com",
+                                credential: "djony620+2@gmail.com"
+                            }
                         ]
                     }
                 });
