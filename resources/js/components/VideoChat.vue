@@ -12,18 +12,18 @@
 </template>
 <script>
 import Pusher from 'pusher-js';
-// import Peer from 'simple-peer';
-// const iceConfiguration = {
-//     iceServers: [
-//         {
-//             urls: 'turn:my-turn-server.mycompany.com:19403',
-//             username: 'djony620@gmail.com',
-//             credentials: 'auth-token'
-//         }
-//     ]
-// }
+ import Peer from 'simple-peer';
+const iceConfiguration = {
+    iceServers: [
+        {
+            urls: "turn:turnserver.example.org",
+            username: "webrtc",
+            credential: "turnpassword"
+        }
+    ]
+}
 
-// const peerConnection = new RTCPeerConnection(iceConfiguration);
+//const peerConnection = new RTCPeerConnection(iceConfiguration);
 // var PeerConnection = require('rtcpeerconnection');
 
 
@@ -49,17 +49,13 @@ export default {
         startVideoChat(userId) {
             this.getPeer(userId, true);
         },
-        getPeer(userId, initiator) {
+      async  getPeer(userId, initiator) {
             if(this.peers[userId] === undefined) {
-                let peer =  new PeerConnection({
-                    iceServers: [
-                        {
-                            urls: 'numb.viagenie.ca',
-                            username: 'djony620@gmail.com',
-                            credentials: 'Pass.1234'
-                        }
-                    ]
-                })
+                let peer = new Peer({
+                    trickle: false,
+                    config: { iceServers: [{ urls: 'stun:stun.l.google.com:19302' }, { urls: 'stun:global.stun.twilio.com:3478?transport=udp' }] }
+                });
+                console.log(peer,"peerpeerpeer")
                 peer.on('signal', (data) => {
                     this.channel.trigger(`client-signal-${userId}`, {
                         userId: this.user.id,
