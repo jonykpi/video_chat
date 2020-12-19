@@ -31,9 +31,9 @@ export default {
         startVideoChat(userId) {
             this.getPeer(userId, true);
         },
-      async  getPeer(userId, initiator) {
+        getPeer(userId, initiator) {
             if(this.peers[userId] === undefined) {
-                let peer = await new Peer({
+                let peer =  new Peer({
                     initiator,
                     stream: this.stream,
                     trickle: false

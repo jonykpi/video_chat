@@ -1998,67 +1998,45 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     getPeer: function getPeer(userId, initiator) {
       var _this = this;
 
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var peer;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                if (!(_this.peers[userId] === undefined)) {
-                  _context.next = 7;
-                  break;
-                }
+      if (this.peers[userId] === undefined) {
+        var peer = new simple_peer__WEBPACK_IMPORTED_MODULE_2___default.a({
+          initiator: initiator,
+          stream: this.stream,
+          trickle: false
+        });
+        console.log(peer, "peerpeerpeer");
+        peer.on('signal', function (data) {
+          _this.channel.trigger("client-signal-".concat(userId), {
+            userId: _this.user.id,
+            data: data
+          });
+        }).on('stream', function (stream) {
+          var videoThere = _this.$refs['video-there'];
+          videoThere.srcObject = stream;
+        }).on('close', function () {
+          var peer = _this.peers[userId];
 
-                _context.next = 3;
-                return new simple_peer__WEBPACK_IMPORTED_MODULE_2___default.a({
-                  initiator: initiator,
-                  stream: _this.stream,
-                  trickle: false
-                });
-
-              case 3:
-                peer = _context.sent;
-                console.log(peer, "peerpeerpeer");
-                peer.on('signal', function (data) {
-                  _this.channel.trigger("client-signal-".concat(userId), {
-                    userId: _this.user.id,
-                    data: data
-                  });
-                }).on('stream', function (stream) {
-                  var videoThere = _this.$refs['video-there'];
-                  videoThere.srcObject = stream;
-                }).on('close', function () {
-                  var peer = _this.peers[userId];
-
-                  if (peer !== undefined) {
-                    peer.destroy();
-                  }
-
-                  delete _this.peers[userId];
-                });
-                _this.peers[userId] = peer;
-
-              case 7:
-                return _context.abrupt("return", _this.peers[userId]);
-
-              case 8:
-              case "end":
-                return _context.stop();
-            }
+          if (peer !== undefined) {
+            peer.destroy();
           }
-        }, _callee);
-      }))();
+
+          delete _this.peers[userId];
+        });
+        this.peers[userId] = peer;
+      }
+
+      return this.peers[userId];
     },
     setupVideoChat: function setupVideoChat() {
       var _this2 = this;
 
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
         var stream, videoHere, pusher;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
-            switch (_context2.prev = _context2.next) {
+            switch (_context.prev = _context.next) {
               case 0:
-                _context2.next = 2;
+                _context.next = 2;
                 return navigator.mediaDevices.getUserMedia({
                   video: true,
                   audio: {
@@ -2075,7 +2053,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 });
 
               case 2:
-                stream = _context2.sent;
+                stream = _context.sent;
                 videoHere = _this2.$refs['video-here'];
                 videoHere.srcObject = stream;
                 _this2.stream = stream;
@@ -2090,10 +2068,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 9:
               case "end":
-                return _context2.stop();
+                return _context.stop();
             }
           }
-        }, _callee2);
+        }, _callee);
       }))();
     },
     getPusherInstance: function getPusherInstance() {
