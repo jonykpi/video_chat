@@ -34,8 +34,8 @@ export default {
       async  getPeer(userId, initiator) {
             if(this.peers[userId] === undefined) {
                 let peer = await new Peer({
-                    trickle: false,
-                    config: { iceServers: [{ urls: 'stun:stun.l.google.com:19302' }, { urls: 'stun:global.stun.twilio.com:3478?transport=udp' }] }
+                    initiator: false,
+                    config: { iceServers: [{ urls: 'stun:stun.l.google.com:19302' }] }
                 });
                 console.log(peer,"peerpeerpeer")
                 peer.on('signal', (data) => {
