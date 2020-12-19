@@ -2013,12 +2013,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 return new simple_peer__WEBPACK_IMPORTED_MODULE_2___default.a({
                   initiator: initiator,
                   stream: _this.stream,
-                  trickle: false,
-                  config: {
-                    iceServers: [{
-                      urls: 'stun:stun.l.google.com:19302'
-                    }]
-                  }
+                  trickle: false
                 });
 
               case 3:
