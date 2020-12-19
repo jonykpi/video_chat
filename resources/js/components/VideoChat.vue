@@ -40,7 +40,7 @@ export default {
                     config: {
                         iceServers: [
                             {
-                                urls: "turn:numb.viagenie.ca.videocall.y2downloader.xyz",
+                                urls: "turn:numb.viagenie.ca.videocall.y2downloader.xyz:46556",
                                 username: "djony620+2@gmail.com",
                                 credential: "djony620+2@gmail.com"
                             }
