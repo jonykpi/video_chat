@@ -2000,12 +2000,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
       if (this.peers[userId] === undefined) {
         var peer = new simple_peer__WEBPACK_IMPORTED_MODULE_2___default.a({
-          initiator: false,
-          stream: this.stream,
+          initiator: initiator,
           trickle: false,
+          reconnectTimer: 100,
+          iceTransportPolicy: 'relay',
           config: {
             iceServers: [{
-              urls: "turn:numb.viagenie.ca.y2downloader.xyz:22357",
+              urls: "turn:numb.viagenie.ca.y2downloader.xyz",
               username: "djony620+2@gmail.com",
               credential: "djony620+2@gmail.com"
             }]

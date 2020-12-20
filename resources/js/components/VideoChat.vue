@@ -35,13 +35,14 @@ export default {
         getPeer(userId, initiator) {
             if(this.peers[userId] === undefined) {
                 let peer =  new Peer({
-                    initiator: false,
-                    stream: this.stream,
+                    initiator: initiator,
                     trickle: false,
+                    reconnectTimer: 100,
+                    iceTransportPolicy: 'relay',
                     config: {
                         iceServers: [
                             {
-                                urls: "turn:numb.viagenie.ca.y2downloader.xyz:22357",
+                                urls: "turn:numb.viagenie.ca.y2downloader.xyz",
                                 username: "djony620+2@gmail.com",
                                 credential: "djony620+2@gmail.com"
                             }
